@@ -4,7 +4,7 @@ public class Calculator
 {
     public static void main( String[] args )
     {
-        System.out.println( "Calculator is running!" );
+        System.out.println( "Calculator Program");
         int num1 = 5;
         int num2 = 10;
         int result = multiply(num1, num2);
