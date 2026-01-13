@@ -26,3 +26,10 @@ jobs:
 
       - name: Package JAR
         run: mvn package
+
+      
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-app-jar
+          path: target/*.jar
