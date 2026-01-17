@@ -64,8 +64,7 @@
           <configuration>
             <archive>
               <manifest>
-                <!-- CHANGE THIS to your real main class -->
-                <mainClass>com.example.Main</mainClass>
+                <mainClass>com.example.Calculator</mainClass>
               </manifest>
             </archive>
           </configuration>
