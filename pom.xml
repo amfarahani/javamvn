@@ -2,7 +2,8 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -13,19 +14,19 @@
   <name>demo</name>
   <url>http://www.example.com</url>
 
+
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <junit.jupiter.version>5.10.2</junit.jupiter.version>
   </properties>
 
   <dependencies>
-    <!-- JUnit 5 (recommended) -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>${junit.jupiter.version}</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -33,6 +34,7 @@
   <build>
     <pluginManagement>
       <plugins>
+
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
@@ -48,19 +50,15 @@
           <version>3.8.0</version>
         </plugin>
 
-        <!-- Surefire runs unit tests (JUnit) -->
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.2.5</version>
-          <configuration>
-            <useModulePath>false</useModulePath>
-          </configuration>
+          <version>2.22.1</version>
         </plugin>
 
-        <!-- Jar plugin adds the Main-Class to the manifest so java -jar works -->
+        
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.0.2</version>
           <configuration>
             <archive>
               <manifest>
@@ -89,22 +87,11 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
       </plugins>
     </pluginManagement>
-
-    <!-- This section actually applies the plugins to your build -->
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-      </plugin>
-    </plugins>
   </build>
 
 </project>
+
 
